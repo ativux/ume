@@ -45,6 +45,8 @@ def game():
     qa = questions_and_answers()
     points = 0
 
+    os.system('clear')
+
     print('\n')
     print(f'Answer the questions your partner made:\n')
 
@@ -53,12 +55,12 @@ def game():
         a = input()
         answer = qa[question]
         if a == answer:
-            print('\n')
             print('You answer was correct! +1 point')
+            print('\n')
             points += 1
         else:
-            print('\n')
             print('You answer was incorrect! 0 point')
+            print('\n')
 
     return print(f'Total points: {points}')
 
