@@ -1,1 +1,0 @@
-This is the final project of CS101 from CodeCademy that I've developed.

@@ -1,15 +1,24 @@
 import os
 
-greetings = " **************************** WELCOME TO U&ME **************************** "
-about = "\nYour partner will write 3 specific questions and the right answer about him/her and you'll have to answer objectively"
-rules = ' \n1. Your partner write 3 questions and the respective answers. \
-          \n2. You answer these 3 questions \
-          \n3. You gain 1 point for a correct answer \
-          \n4. There is 3 rounds for each individual \n'
+def greetings_and_instructions():
+    art_ume = ''' 
+                uu      u    &&& &          mmm             m m    eeeeeeeeeeee
+                uu      u    &&             mm  m         m   m    eee
+                uu      u     &&       &    mm    m     m     m    eeeeeeeeeeee
+                uu      u    &&& &   &      mm      mmm       m    eeeeeeeeeeee
+                uu      u   &&     &        mm                m    eee
+                 uuu u u    &&& & & & &     mm                m    eeeeeeeeeeee
+                  uuuuu       &&&&&                mmmmm               eeeee '''
+    about = "\n                 Welcome to the U&ME terminal game. \n                 Here comes the instructions:\n                 Your partner will write 3 specific questions about anything and you'll have to answer."
+    rules = '\n1. Your partner write 3 questions and the respective answers. \
+            \n2. You have to answer these 3 questions. \
+            \n3. You gain 1 point for a correct answer. \n'
 
-print(greetings)
-print(about)
-print(rules)
+    print(art_ume)
+    print(about)
+    print('\n')
+    print('** RULES **')
+    print(rules)
 
 def questions_maker():
     questions = []
@@ -18,7 +27,7 @@ def questions_maker():
     for question in range(3):
         print('\n')
         print(f'Question {counter + 1} of 3')
-        questions.append(input())
+        questions.append(input().title())
         counter += 1
     return questions
 
@@ -30,7 +39,7 @@ def answer_maker(questions):
     for question in questions:
         print('\n')
         print(f'{question}?: ')
-        answers.append(input())
+        answers.append(input().title())
     return answers
 
 
@@ -42,7 +51,10 @@ def questions_and_answers():
 
 
 def game():
+
+    greetings_and_instructions()
     qa = questions_and_answers()
+
     points = 0
 
     os.system('clear')
@@ -52,7 +64,7 @@ def game():
 
     for question in qa.keys():
         print(question, ':')
-        a = input()
+        a = input().title()
         answer = qa[question]
         if a == answer:
             print('You answer was correct! +1 point')
