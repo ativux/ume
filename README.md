@@ -11,7 +11,7 @@ Welcome to the U&ME terminal game.
 ==================================
 
 <sub> This is the final project of CS101 from CodeCademy that I've developed. </sub>
-<sub> Contact me on LinkedIn: https://www.linkedin.com/in/ricardo-matias-567610132/ </sub>
+<sub> Contact me on LinkedIn: [Ricardo Matias](https://www.linkedin.com/in/ricardo-matias-567610132/) </sub>
 
 # Instructions:
 ## Your partner will write 3 specific questions about anything and you'll have to answer.
